@@ -44,7 +44,7 @@ const Hero = () => {
                 <div className="text-sm" style={{color: "#000"}}>Rating</div>
               </div>
               <div>
-                <div className="text-2xl font-bold mb-1" style={{color: "#34c759"}}>5000+</div>
+                <div className="text-2xl font-bold mb-1" style={{color: "#34c759"}}>500+</div>
                 <div className="text-sm" style={{color: "#000"}}>Patients</div>
               </div>
               <div>
