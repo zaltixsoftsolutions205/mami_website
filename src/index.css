@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 270 40% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 40% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 40% 20%;
+
+    --primary: 270 50% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 180 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 270 50% 40%;
+
+    --radius: 0.5rem;
+
+    --medical-purple: 270 50% 40%;
+    --medical-purple-dark: 270 50% 30%;
+    --medical-teal: 180 60% 50%;
+    --medical-teal-light: 180 60% 90%;
+    --overlay-bg: 270 50% 40% / 0.03;
+  }
+
+  .dark {
+    --background: 270 30% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 270 30% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 270 30% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 270 50% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 270 30% 20%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 180 60% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 30% 25%;
+    --input: 270 30% 25%;
+    --ring: 270 50% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
