@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// Change this to match your actual logo file
 import drRamyaLogo from "@/assets/logo.png";
 
 const Header = () => {
@@ -18,7 +17,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-20 items-center justify-between px-4">
         <div className="flex items-center gap-3">
-          {/* Logo (removed all rounding and backgrounds) */}
+          {/* Logo */}
           <img
             src={drRamyaLogo}
             alt="Medical Logo"
@@ -33,17 +32,24 @@ const Header = () => {
               margin: 0
             }}
           />
+
+          {/* Doctor Info */}
           <div>
-            {/* Doctor name: purple and teal */}
-            <h1 className="text-2xl font-bold">
-              <span style={{ color: "#25C5DA" }}>DR. RAMYA</span>{" "}
-              <span style={{ color: "#19ae57ff" }}>KRISHNA</span>
+            <h1 className="text-2xl font-bold leading-tight">
+              <span style={{ color: "#25C5DA" }}>DR. RAMYA KRISHNA</span>{" "}
+              <span style={{ color: "#19ae57ff" }}>MAMIDALA</span>
             </h1>
-            <p className="text-sm text-muted-foreground">
-              Physiatrist & Pain Management
+
+            {/* Updated Professional Details */}
+            <p className="text-sm text-muted-foreground leading-tight">
+              Senior Physiotherapist
+            </p>
+            <p className="text-xs text-muted-foreground leading-tight">
+              MIAP (India) • HCPC (UK) • DHA (Dubai)
             </p>
           </div>
         </div>
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
@@ -63,6 +69,7 @@ const Header = () => {
             Book Appointment
           </Button>
         </nav>
+
         {/* Mobile Menu Button */}
         <button
           className="md:hidden rounded-none"
@@ -77,6 +84,7 @@ const Header = () => {
           )}
         </button>
       </div>
+
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden border-t bg-white">
