@@ -160,9 +160,7 @@ const WorkingHours = () => {
                 </a>
               </p>
 
-              <p>
-                <strong>Follow Me:</strong>
-              </p>
+              <p><strong>Follow Me:</strong></p>
 
               {/* SOCIAL ICONS */}
               <div className="flex items-center gap-5 mt-2">
@@ -193,8 +191,21 @@ const WorkingHours = () => {
                 >
                   <Mail size={28} color={SKY_BLUE} />
                 </a>
-              </div>
 
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/919533079819"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70 transition"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="WhatsApp"
+                    className="w-7 h-7"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
