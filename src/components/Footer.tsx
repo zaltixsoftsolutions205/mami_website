@@ -8,18 +8,25 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground" style={{ backgroundColor: SKY_BLUE }}>
       <div className="container px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
+          
+          {/* LOGO + ABOUT */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img src={logo} alt="Medical Logo" className="h-12 w-12" />
               <div>
                 <h3 className="text-xl font-bold" style={{ color: "#fff" }}>Dr. Ramyakrishna</h3>
-                <p className="text-sm opacity-90" style={{ color: "#e6f0fa" }}>Physiatrist & Pain Management</p>
+                <p className="text-sm opacity-90" style={{ color: "#e6f0fa" }}>
+                  Physiotherapist & Rehab Specialist
+                </p>
               </div>
             </div>
+
             <p className="opacity-80 mb-4" style={{ color: "#e0ebff" }}>
-              Providing expert physiatry care and pain management services to help you live
-              a pain-free, active life.
+              Offering personalized physiotherapy care to help you reduce pain, restore mobility,
+              and return to a healthier, active lifestyle.
             </p>
+
+            {/* SOCIAL ICONS */}
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
                 <a
@@ -46,12 +53,13 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* QUICK LINKS */}
           <div>
             <h4 className="font-bold text-lg mb-4" style={{ color: "#e0ebff" }}>Quick Links</h4>
             <ul className="space-y-2 opacity-90">
               <li>
                 <a href="#about" className="hover:opacity-100 transition-opacity" style={{ color: "#c7d9ff" }}>
-                  About Us
+                  About Me
                 </a>
               </li>
               <li>
@@ -72,6 +80,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* RESOURCES */}
           <div>
             <h4 className="font-bold text-lg mb-4" style={{ color: "#e0ebff" }}>Resources</h4>
             <ul className="space-y-2 opacity-90">
@@ -101,7 +110,7 @@ const Footer = () => {
 
         <div className="border-t pt-8 text-center opacity-80" style={{ borderColor: "#a0beff" }}>
           <p style={{ color: "#d6e3ff" }}>
-            &copy; {new Date().getFullYear()} Dr.Ramyakrishna. All rights reserved.
+            &copy; {new Date().getFullYear()} Dr. Ramyakrishna. All rights reserved.
           </p>
         </div>
       </div>
