@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="max-w-2xl">
           <div className="bg-background/95 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-2xl border-l-4 border-accent">
             <p className="text-sm font-semibold mb-3 uppercase tracking-wider" style={{color: "#000"}}>
-              Expert Physiatry Care
+              Expert Physiotherapy
             </p>
             <h2 className="text-5xl md:text-6xl font-bold mb-2" style={{color: "#24b8e7"}}>
               Restore Movement,
@@ -28,8 +28,8 @@ const Hero = () => {
               Reclaim Your Life
             </h2>
             <p className="text-lg mb-8 leading-relaxed" style={{color: "#000"}}>
-              Personalized physiatry care designed to help you recover, strengthen, and move freely. 
-              Experience expert rehabilitation and pain management — from comprehensive in-person care 
+              Personalized physiotherapy designed to help you recover, strengthen, and move freely.
+              Experience expert rehabilitation and pain management — from comprehensive in-person care
               to convenient video consultations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -44,7 +44,7 @@ const Hero = () => {
                 <div className="text-sm" style={{color: "#000"}}>Rating</div>
               </div>
               <div>
-                <div className="text-2xl font-bold mb-1" style={{color: "#34c759"}}>5000+</div>
+                <div className="text-2xl font-bold mb-1" style={{color: "#34c759"}}>500+</div>
                 <div className="text-sm" style={{color: "#000"}}>Patients</div>
               </div>
               <div>

@@ -9,96 +9,104 @@ const services = [
   {
     icon: Stethoscope,
     accentColor: SKY_BLUE,
-    title: "Personalized One-on-One Treatment",
+    title: "Comprehensive Physiotherapy Assessment",
     description:
-      "Individualized sessions tailored to your unique needs. We carefully assess your condition and develop a customized rehabilitation plan focused on your recovery without distractions or time constraints.",
+      "A complete one-on-one evaluation to understand your condition, movement patterns, pain points, and functional needs. Every session is designed to identify the root cause and create a personalized plan that supports long-term recovery.",
     features: [
-      "Dedicated personal attention",
-      "Flexible scheduling",
-      "Tailored treatment plans"
+      "Detailed physical assessment",
+      "Clear diagnosis and guidance",
+      "Personalized care approach"
     ],
-    note: "Typical session: 45-60 minutes. Ideal for patients seeking focused, individualized care."
+    note: "Typical session: 45–60 minutes. Ideal for anyone seeking dedicated attention and a fully customized recovery plan."
   },
   {
     icon: Heart,
     accentColor: GREEN,
-    title: "Effective Pain Relief Therapy",
+    title: "Pain Relief & Mobility Restoration",
     description:
-      "Utilizing gentle and evidence-based techniques to alleviate pain. Whether addressing neck, back, knee, or shoulder discomfort, our methods are designed for safe and lasting relief.",
+      "Gentle and effective physiotherapy techniques that help reduce pain, improve mobility, and restore comfort in your daily activities. Suitable for neck, back, knee, shoulder, and joint-related conditions.",
     features: [
-      "Rapid pain reduction",
-      "Non-invasive approaches",
-      "Minimized reliance on medication"
+      "Drug-free pain reduction",
+      "Improves flexibility and movement",
+      "Safe and calming techniques"
     ],
-    note: "Sessions combine interventional procedures, manual therapy, and guided exercises to reduce pain and restore function."
+    note: "Sessions blend manual therapy and guided exercises to help restore function and ease discomfort naturally."
   },
   {
     icon: Activity,
     accentColor: SKY_BLUE,
-    title: "Convenient Video Consultations",
+    title: "Video Consultation & Guided Care",
     description:
-      "Access professional physiatry care remotely through secure video sessions. Receive expert guidance from the comfort and safety of your home, saving travel time without compromising quality.",
+      "Expert physiotherapy guidance from the comfort of your home. Our video consultations include assessment, exercise demonstration, and progress tracking—convenient for busy patients or those who prefer remote care.",
     features: [
-      "Remote access from anywhere",
-      "Flexible and time-saving",
-      "Easy appointment booking"
+      "Secure HD video sessions",
+      "Easy scheduling and follow-ups",
+      "Comfortable home-based care"
     ],
-    note: "Remote follow-ups and exercise progressions provided. Great for busy or remote patients."
+    note: "Ideal for follow-ups, exercise progression, and ongoing pain management support."
   },
   {
     icon: Brain,
     accentColor: GREEN,
-    title: "Neurological Rehabilitation",
+    title: "Neurological Physiotherapy",
     description:
-      "Specialized treatment for stroke, spinal cord injuries, and other neurological conditions. Our comprehensive programs help restore function, improve mobility, and enhance quality of life.",
+      "Supportive rehabilitation designed for patients recovering from stroke, spinal cord injuries, Parkinson’s disease, and other neurological conditions. The focus is on improving balance, coordination, mobility, and confidence.",
     features: [
-      "Stroke recovery programs",
-      "Spinal cord injury management",
-      "Movement disorder treatment"
+      "Balance and gait training",
+      "Motor control improvement",
+      "Strength and coordination support"
     ],
-    note: "Evidence-based neurological rehabilitation with focus on functional independence and quality of life."
+    note: "Helps enhance independence and daily functioning through structured and compassionate rehabilitation."
   },
   {
     icon: Stethoscope,
     accentColor: SKY_BLUE,
-    title: "Specialized Back & Neck Pain Relief",
+    title: "Back & Neck Pain Treatment",
     description:
-      "Focused treatment for common spinal issues using clinically proven protocols that deliver noticeable improvement, enhancing your comfort and mobility.",
+      "Targeted physiotherapy to relieve chronic and acute spinal discomfort, including posture-related pain, disc issues, and muscle tightness. Each session is tailored to improve alignment, strength, and spinal health.",
     features: [
-      "Targeted therapies",
-      "Fast functional recovery",
-      "Clinically validated methods"
+      "Posture correction guidance",
+      "Relief from stiffness and tension",
+      "Improves core and spinal stability"
     ],
-    note: "Personalized spinal programs that focus on restoring mobility and reducing flare-ups."
+    note: "Customized programs that help restore movement, reduce flare-ups, and support long-term back and neck health."
   },
   {
     icon: Activity,
     accentColor: GREEN,
-    title: "Sports Injury & Performance Rehabilitation",
+    title: "Sports Injury & Performance Rehab",
     description:
-      "Supporting athletes and active individuals through safe, progressive rehabilitation. Our programs help you recover fully and return stronger to your sport or fitness routine.",
+      "Focused rehabilitation for athletes and active individuals recovering from sprains, strains, and sports-related injuries. Programs are designed to restore strength, flexibility, and performance safely.",
     features: [
-      "Athlete-centric care",
-      "Evidence-guided recovery",
-      "Strength and safety focus"
+      "Sport-specific strengthening",
+      "Injury prevention training",
+      "Enhanced mobility and power"
     ],
-    note: "Performance-focused rehab with return-to-sport planning and strength progression."
+    note: "Perfect for athletes aiming to return stronger with improved performance and reduced risk of reinjury."
   }
 ];
 
 const Services = () => {
   return (
-    <section id="services" className="py-20" style={{background: "#f8fbfc"}}>
+    <section id="services" className="py-20" style={{ background: "#f8fbfc" }}>
       <div className="container px-4">
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold mb-3 uppercase tracking-wider" style={{color: GREEN}}>
+          <p
+            className="text-sm font-semibold mb-3 uppercase tracking-wider"
+            style={{ color: GREEN }}
+          >
             💼 Our Services
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{color: SKY_BLUE}}>
-            How We Support Your Recovery
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-4"
+            style={{ color: SKY_BLUE }}
+          >
+            Supporting Your Recovery, Step by Step
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{color: "#222"}}>
-            Evidence-based physiatry treatments designed to improve your health, mobility, and quality of life—delivered with personalized care.
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: "#222" }}>
+            We offer compassionate, patient-focused physiotherapy treatments
+            designed to relieve pain, improve movement, and help you return to
+            the activities you love—with confidence and comfort.
           </p>
         </div>
 
@@ -107,12 +115,11 @@ const Services = () => {
             <Card
               key={index}
               className="group transition-all duration-300 border-2"
-              style={{borderColor: service.accentColor}}
+              style={{ borderColor: service.accentColor }}
             >
               <CardContent className="p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative">
-                    {/* Removed colored shadow/blur */}
                     <div
                       className="relative p-4 rounded-lg transition-colors"
                       style={{
@@ -123,26 +130,42 @@ const Services = () => {
                       <service.icon className="h-8 w-8" />
                     </div>
                   </div>
-                  <div className="text-4xl font-bold" style={{color: service.accentColor, opacity: 0.2}}>{index + 1}</div>
+                  <div
+                    className="text-4xl font-bold"
+                    style={{ color: service.accentColor, opacity: 0.2 }}
+                  >
+                    {index + 1}
+                  </div>
                 </div>
-                
-                <h3 className="text-xl font-bold mb-3" style={{color: service.accentColor}}>
+
+                <h3
+                  className="text-xl font-bold mb-3"
+                  style={{ color: service.accentColor }}
+                >
                   {service.title}
                 </h3>
-                <p className="leading-relaxed mb-6" style={{color: "#222"}}>
+
+                <p className="leading-relaxed mb-6" style={{ color: "#222" }}>
                   {service.description}
                 </p>
-                
+
                 <ul className="space-y-2 mb-4">
                   {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm" style={{color: "#444"}}>
-                      <span style={{color: service.accentColor}}>✓</span>
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-sm"
+                      style={{ color: "#444" }}
+                    >
+                      <span style={{ color: service.accentColor }}>✓</span>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <p className="text-xs italic bg-muted/50 p-3 rounded" style={{color: "#444", background: "#eefbfd"}}>
+
+                <p
+                  className="text-xs italic bg-muted/50 p-3 rounded"
+                  style={{ color: "#444", background: "#eefbfd" }}
+                >
                   {service.note}
                 </p>
               </CardContent>
