@@ -14,7 +14,7 @@ const About = () => {
   return (
     <section id="about" className="py-20" style={{ background: "#f8fbfc" }}>
       <div className="container px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <p
               className="text-sm font-semibold mb-3 uppercase tracking-wider"
@@ -34,6 +34,16 @@ const About = () => {
             >
               Physiotherapist & Healthcare Manager
             </h3>
+            
+            {/* Profile Image for Mobile - Square */}
+            <div className="block md:hidden mb-6 flex justify-center">
+              <img
+                src="/src/assets/about.png"
+                alt="Dr. Ramyakrishna Mamidala - Professional Physiotherapist"
+                className="w-80 h-80 object-cover rounded-lg shadow-md"
+              />
+            </div>
+
             <div className="space-y-4" style={{ color: "#222" }}>
               <p className="text-lg leading-relaxed">
                 I am a dedicated physiotherapist with over a decade of global experience in rehabilitation, patient care, and healthcare management. I specialize in developing personalized recovery programs that effectively manage pain and restore function, empowering patients to regain active and fulfilling lives. My international practice across diverse healthcare systems has honed my cultural competence and clinical expertise, enabling me to deliver evidence-based treatments tailored to individual needs. Committed to lifelong learning and innovation, I strive to optimize patient outcomes through compassionate and scientifically grounded care.
@@ -87,8 +97,17 @@ const About = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-6">
+          <div className="space-y-6 mt-8">
+            {/* Profile Image for Desktop - Moved Down */}
+            <div className="hidden md:flex justify-center">
+              <img
+                src="/src/assets/about.png"
+                alt="Dr. Ramyakrishna Mamidala - Professional Physiotherapist"
+                className="w-[32rem] h-[28rem] object-cover rounded-lg shadow-2xl"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-6 mt-8">
               {stats.map((stat, index) => (
                 <div
                   key={index}

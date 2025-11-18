@@ -6,7 +6,7 @@ import VideoConsultation from "@/components/VideoConsultation";
 import Testimonials from "@/components/Testimonials";
 import WorkingHours from "@/components/WorkingHours";
 import Footer from "@/components/Footer";
-
+import Gallery from "@/components/gallery";
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -16,6 +16,7 @@ const Index = () => {
       <About />
       <VideoConsultation />
       <Testimonials />
+      <Gallery />
       <WorkingHours />
       <Footer />
     </div>
