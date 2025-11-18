@@ -70,14 +70,10 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8">
-<<<<<<< HEAD
               <Button
                 size="lg"
                 className="text-white bg-blue-400 hover:bg-blue-500 group w-full sm:w-auto"
               >
-=======
-              <Button size="lg" className="text-base group w-full sm:w-auto">
->>>>>>> 12a4d5761862a89605cfa56ba991d634b96bc876
                 Book Video Consultation
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
