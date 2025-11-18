@@ -13,6 +13,15 @@ const Header = () => {
     { label: "Contact", href: "#hours" },
   ];
 
+  const handleBookAppointment = () => {
+    // Scroll to contact section
+    const contactSection = document.getElementById("hours");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur-sm">
       <div className="container flex h-16 md:h-20 items-center justify-between px-4">
@@ -57,15 +66,23 @@ const Header = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              style={{ color: "#24b8e7" }} // Sky blue color
             >
               {item.label}
             </a>
           ))}
           <Button
             size="lg"
-            className="ml-4 rounded-none bg-transparent hover:bg-primary/10 border border-primary/20"
-            style={{ borderRadius: 0, background: "transparent", boxShadow: "none" }}
+            className="ml-4 rounded-none hover:bg-green-600 transition-colors"
+            style={{ 
+              borderRadius: 0, 
+              background: "#34c759", // Green color
+              color: "white",
+              boxShadow: "none",
+              border: "none"
+            }}
+            onClick={handleBookAppointment}
           >
             Book Appointment
           </Button>
@@ -94,7 +111,8 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-base font-medium text-foreground hover:text-primary transition-colors py-3 px-2 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 rounded-lg"
+                className="text-base font-medium hover:text-primary transition-colors py-3 px-2 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 rounded-lg"
+                style={{ color: "#24b8e7" }} // Sky blue color
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -102,9 +120,15 @@ const Header = () => {
             ))}
             <Button
               size="lg"
-              className="mt-4 rounded-none bg-transparent hover:bg-primary/10 border border-primary/20 w-full"
-              style={{ borderRadius: 0, background: "transparent", boxShadow: "none" }}
-              onClick={() => setIsMenuOpen(false)}
+              className="mt-4 rounded-none hover:bg-green-600 transition-colors w-full"
+              style={{ 
+                borderRadius: 0, 
+                background: "#34c759", // Green color
+                color: "white",
+                boxShadow: "none",
+                border: "none"
+              }}
+              onClick={handleBookAppointment}
             >
               Book Appointment
             </Button>
