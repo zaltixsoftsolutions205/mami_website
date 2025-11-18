@@ -15,14 +15,14 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white">
-      <div className="container flex h-20 items-center justify-between px-4">
-        <div className="flex items-center gap-3">
+      <div className="container flex h-16 md:h-20 items-center justify-between px-4">
+        <div className="flex items-center gap-2 md:gap-3">
           {/* Logo */}
           <img
             src={drRamyaLogo}
             alt="Medical Logo"
             style={{
-              height: "48px",
+              height: "40px",
               width: "auto",
               background: "none",
               border: "none",
@@ -31,20 +31,21 @@ const Header = () => {
               padding: 0,
               margin: 0
             }}
+            className="md:h-12"
           />
 
           {/* Doctor Info */}
-          <div>
-            <h1 className="text-2xl font-bold leading-tight">
-              <span style={{ color: "#25C5DA" }}>DR. RAMYA KRISHNA</span>{" "}
-              <span style={{ color: "#19ae57ff" }}>MAMIDALA</span>
+          <div className="max-w-[180px] md:max-w-none">
+            <h1 className="text-lg md:text-2xl font-bold leading-tight">
+              <span style={{ color: "#25C5DA" }}>DR. RAMYA</span>{" "}
+              <span style={{ color: "#19ae57ff" }}>KRISHNA</span>
             </h1>
 
             {/* Updated Professional Details */}
-            <p className="text-sm text-muted-foreground leading-tight">
+            <p className="text-xs md:text-sm text-muted-foreground leading-tight">
               Senior Physiotherapist
             </p>
-            <p className="text-xs text-muted-foreground leading-tight">
+            <p className="text-[10px] md:text-xs text-muted-foreground leading-tight">
               MIAP (India) • HCPC (UK) • DHA (Dubai)
             </p>
           </div>
@@ -93,7 +94,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="text-base font-medium text-foreground hover:text-primary transition-colors py-2 border-b border-gray-100 last:border-b-0"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -101,7 +102,7 @@ const Header = () => {
             ))}
             <Button
               size="lg"
-              className="mt-2 rounded-none bg-transparent hover:bg-primary/10"
+              className="mt-2 rounded-none bg-transparent hover:bg-primary/10 w-full"
               style={{ borderRadius: 0, background: "transparent", boxShadow: "none" }}
             >
               Book Appointment
