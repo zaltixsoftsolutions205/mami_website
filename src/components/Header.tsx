@@ -37,8 +37,8 @@ const Header = () => {
           {/* Doctor Info */}
           <div className="max-w-[180px] md:max-w-none">
             <h1 className="text-lg md:text-2xl font-bold leading-tight">
-              <span style={{ color: "#25C5DA" }}>DR. RAMYA</span>{" "}
-              <span style={{ color: "#19ae57ff" }}>KRISHNA</span>
+              <span style={{ color: "#25C5DA" }}>DR. RAMYA KRISHNA</span>{" "}
+              <span style={{ color: "#19ae57ff" }}>MAMIDALA</span>
             </h1>
 
             {/* Updated Professional Details */}
