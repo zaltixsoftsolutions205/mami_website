@@ -31,7 +31,7 @@ const Header = () => {
             src={drRamyaLogo}
             alt="Dr. Ramya Krishna Mamidala - Senior Physiotherapist"
             style={{
-              height: "40px",
+              height: "60px",
               width: "auto",
               background: "none",
               border: "none",
