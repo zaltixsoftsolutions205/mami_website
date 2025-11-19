@@ -50,7 +50,7 @@ const services = [
     accentColor: GREEN,
     title: "Neurological Physiotherapy",
     description:
-      "Supportive rehabilitation designed for patients recovering from stroke, spinal cord injuries, Parkinson’s disease, and other neurological conditions. The focus is on improving balance, coordination, mobility, and confidence.",
+      "Supportive rehabilitation designed for patients recovering from stroke, spinal cord injuries, Parkinson's disease, and other neurological conditions. The focus is on improving balance, coordination, mobility, and confidence.",
     features: [
       "Balance and gait training",
       "Motor control improvement",
@@ -88,40 +88,52 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20" style={{ background: "#f8fbfc" }}>
+    <section id="services" className="py-20 overflow-hidden" style={{ background: "#f8fbfc" }}>
       <div className="container px-4">
+        {/* Header Section with Animation */}
         <div className="text-center mb-16">
-          <p
-            className="text-sm font-semibold mb-3 uppercase tracking-wider"
-            style={{ color: GREEN }}
-          >
-            💼 Our Services
-          </p>
-          <h2
-            className="text-4xl md:text-5xl font-bold mb-4"
-            style={{ color: SKY_BLUE }}
-          >
-            Supporting Your Recovery, Step by Step
-          </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: "#222" }}>
-            We offer compassionate, patient-focused physiotherapy treatments
-            designed to relieve pain, improve movement, and help you return to
-            the activities you love—with confidence and comfort.
-          </p>
+          <div className="animate-fade-in-up">
+            <p
+              className="text-sm font-semibold mb-3 uppercase tracking-wider"
+              style={{ color: GREEN }}
+            >
+              💼 Our Services
+            </p>
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-4"
+              style={{ color: SKY_BLUE }}
+            >
+              Supporting Your Recovery, Step by Step
+            </h2>
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#222" }}>
+              We offer compassionate, patient-focused physiotherapy treatments
+              designed to relieve pain, improve movement, and help you return to
+              the activities you love—with confidence and comfort.
+            </p>
+          </div>
         </div>
 
+        {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group transition-all duration-300 border-2"
-              style={{ borderColor: service.accentColor }}
+              className="group transition-all duration-500 hover:duration-300 border-2 animate-fade-in-up transform hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
+              style={{ 
+                borderColor: service.accentColor,
+                animationDelay: `${0.3 + index * 0.1}s`
+              }}
             >
               <CardContent className="p-8">
+                {/* Icon and Number */}
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative">
                     <div
-                      className="relative p-4 rounded-lg transition-colors"
+                      className="relative p-4 rounded-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
                       style={{
                         background: service.accentColor + "22",
                         color: service.accentColor
@@ -131,39 +143,53 @@ const Services = () => {
                     </div>
                   </div>
                   <div
-                    className="text-4xl font-bold"
+                    className="text-4xl font-bold transition-all duration-300 group-hover:scale-110"
                     style={{ color: service.accentColor, opacity: 0.2 }}
                   >
                     {index + 1}
                   </div>
                 </div>
 
+                {/* Title */}
                 <h3
-                  className="text-xl font-bold mb-3"
+                  className="text-xl font-bold mb-3 transition-colors duration-300 group-hover:scale-105 transform origin-left"
                   style={{ color: service.accentColor }}
                 >
                   {service.title}
                 </h3>
 
-                <p className="leading-relaxed mb-6" style={{ color: "#222" }}>
+                {/* Description */}
+                <p 
+                  className="leading-relaxed mb-6 transition-colors duration-300 group-hover:text-gray-800"
+                  style={{ color: "#222" }}
+                >
                   {service.description}
                 </p>
 
+                {/* Features List */}
                 <ul className="space-y-2 mb-4">
                   {service.features.map((feature, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-2 text-sm"
+                      className="flex items-center gap-2 text-sm transition-all duration-300 transform group-hover:translate-x-1"
                       style={{ color: "#444" }}
                     >
-                      <span style={{ color: service.accentColor }}>✓</span>
-                      <span>{feature}</span>
+                      <span 
+                        className="transition-transform duration-300 group-hover:scale-125"
+                        style={{ color: service.accentColor }}
+                      >
+                        ✓
+                      </span>
+                      <span className="transition-colors duration-300 group-hover:text-gray-800">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
 
+                {/* Note */}
                 <p
-                  className="text-xs italic bg-muted/50 p-3 rounded"
+                  className="text-xs italic bg-muted/50 p-3 rounded transition-all duration-300 group-hover:bg-muted/70 group-hover:scale-105"
                   style={{ color: "#444", background: "#eefbfd" }}
                 >
                   {service.note}
@@ -172,6 +198,24 @@ const Services = () => {
             </Card>
           ))}
         </div>
+
+        {/* Custom Animation Styles */}
+        <style>{`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(40px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+          }
+        `}</style>
       </div>
     </section>
   );
