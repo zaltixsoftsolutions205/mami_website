@@ -1,5 +1,6 @@
 import { Award, GraduationCap, Users, Clock } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import aboutImage from "../assets/about.png"; // ✅ Proper import
 
 const SKY_BLUE = "#24b8e7";
 const GREEN = "#34c759";
@@ -110,7 +111,7 @@ const About = () => {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-green-400 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                 <img
-                  src="/src/assets/about.png"
+                  src={aboutImage} // ✅ Using imported image
                   alt="Dr. Ramyakrishna Mamidala - Professional Physiotherapist"
                   className="relative w-80 h-80 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-105"
                 />
@@ -225,7 +226,7 @@ const About = () => {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-sky-400 to-green-400 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                 <img
-                  src="/src/assets/about.png"
+                  src={aboutImage} // ✅ Using imported image
                   alt="Dr. Ramyakrishna Mamidala - Professional Physiotherapist"
                   className="relative w-[32rem] h-[28rem] object-cover rounded-lg shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl group-hover:rotate-1"
                 />

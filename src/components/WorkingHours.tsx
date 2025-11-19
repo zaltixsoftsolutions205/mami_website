@@ -14,15 +14,47 @@ const WorkingHours = () => {
     time: "",
     concern: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Booking confirmed!");
+    setIsSubmitting(true);
+
+    try {
+      // Create the WhatsApp message
+      const message = `New Appointment Booking:\n\nName: ${formData.fullName}\nEmail: ${formData.email}\nDate: ${formData.date}\nTime: ${formData.time}\nConcern: ${formData.concern}`;
+      
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(message);
+      
+      // WhatsApp API URL (replace 919533079819 with your actual number without +)
+      const whatsappUrl = `https://wa.me/919533079819?text=${encodedMessage}`;
+      
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+      
+      // Optional: Show success message
+      alert("Redirecting to WhatsApp... Please send the pre-filled message to confirm your booking.");
+      
+      // Reset form
+      setFormData({
+        fullName: "",
+        email: "",
+        date: "",
+        time: "",
+        concern: "",
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      alert("An error occurred while preparing the WhatsApp message.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -123,9 +155,11 @@ const WorkingHours = () => {
 
               <button
                 type="submit"
-                className="w-full md:w-auto px-6 py-3 bg-accent text-white font-semibold rounded hover:bg-accent-dark transition text-sm md:text-base"
+                disabled={isSubmitting}
+                className="w-full md:w-auto px-6 py-3 text-white font-semibold rounded transition text-sm md:text-base disabled:opacity-50"
+                style={{ backgroundColor: GREEN }}
               >
-                Confirm Booking
+                {isSubmitting ? "Redirecting..." : "Book via WhatsApp"}
               </button>
             </form>
           </div>
@@ -155,7 +189,11 @@ const WorkingHours = () => {
 
               <p className="text-sm md:text-base">
                 <strong>Email:</strong>{" "}
-                <a href="mailto:drramyakrishna.expert@gmail.com" className="text-accent underline break-all">
+                <a 
+                  href="mailto:drramyakrishna.expert@gmail.com" 
+                  className="underline break-all"
+                  style={{ color: SKY_BLUE }}
+                >
                   drramyakrishna.expert@gmail.com
                 </a>
               </p>
