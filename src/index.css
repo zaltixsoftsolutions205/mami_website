@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Apply the font globally */
 @layer base {
+  html {
+    font-family: 'Lato', sans-serif;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 270 40% 20%;
@@ -74,9 +77,7 @@ All colors MUST be HSL.
     --input: 270 30% 25%;
     --ring: 270 50% 60%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }

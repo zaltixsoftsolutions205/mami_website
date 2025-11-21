@@ -97,7 +97,7 @@ const About = () => {
                 className="text-2xl font-semibold mb-6"
                 style={{ color: GREEN }}
               >
-                Physiotherapist & MIAP(India),HCPC (UK),DHA(Dubai)
+                Senior Physiotherapist & MIAP(India),HCPC (UK),DHA(Dubai)
               </h3>
             </div>
 
